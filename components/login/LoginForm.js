@@ -1,11 +1,13 @@
 import { Form, Input, Button, Checkbox, Select, Row } from "antd";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import TermsModal from "./TermsModal";
 const { Option } = Select;
 
 const plainOptions = ["I am a Doctor", "I am a Patient"];
 
 const LoginForm = () => {
+  const router = useRouter();
   const [openTermsConditions, setOpenTermsConditions] = useState(false);
 
   const handleTermsClick = () => {
@@ -16,6 +18,7 @@ const LoginForm = () => {
   };
   const onFinish = () => {
     //submit form
+    router.push("/dashboard/new-case");
   };
 
   return (
@@ -54,11 +57,8 @@ const LoginForm = () => {
           >
             <Input placeholder="Email*" />
           </Form.Item>
-          <Form.Item
-            name="number"
-            rules={[{ type: "number", message: "invalid!" }]}
-          >
-            <Input placeholder="Mobile*" />
+          <Form.Item name="Mobile">
+            <Input placeholder="Mobile" type="number" />
           </Form.Item>
           <Form.Item name="Gender" rules={[{ required: true }]}>
             <Select placeholder="gender*" allowClear>
@@ -77,14 +77,8 @@ const LoginForm = () => {
           <Form.Item name="city" rules={[]}>
             <Input placeholder="City*" />
           </Form.Item>
-          <Form.Item
-            name="postal code"
-            rules={[
-              { type: "number" },
-              { max: 5, message: "Invalid postal code" },
-            ]}
-          >
-            <Input placeholder="Postal Code*" />
+          <Form.Item name="postal code" rules={[{ min: 5, message: "Min 5" }]}>
+            <Input placeholder="Postal Code*" type="number" />
           </Form.Item>
           <Form.Item
             name="password"
