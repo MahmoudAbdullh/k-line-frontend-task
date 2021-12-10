@@ -1,0 +1,20 @@
+.login-page-wrapper {
+  height: 100vh;
+
+  .col-left {
+    background-color: #5282a5;
+  }
+  .col-right {
+    background-color: #fff;
+    padding: 2em 5em;
+    .logo-wrapper {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    .ant-checkbox-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+    }
+  }
+}
