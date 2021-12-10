@@ -1,0 +1,10 @@
+.new-case-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .ant-card {
+    width: 80%;
+    border-radius: 10px;
+  }
+}

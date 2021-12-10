@@ -22,7 +22,7 @@ export default function Home() {
         <Col span={16} className="col-left" />
         <Col span={8} className="col-right">
           <div className="logo-wrapper">
-            <img src="/logo.webp" layout="fill" />
+            <img src="/logo.webp" />
           </div>
           <LoginForm />
         </Col>

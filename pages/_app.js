@@ -7,7 +7,7 @@ import "../styles/style.scss";
 
 // ConfigProvider.config({
 //   theme: {
-//     primaryColor: "#5282a5",
+//     primaryColor: "#4f758a",
 //   },
 // });
 export default function App({ Component, pageProps }) {
